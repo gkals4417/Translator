@@ -24,6 +24,7 @@
 		4D5C7906288F867100FDC45B /* DetectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C7905288F867100FDC45B /* DetectedViewController.swift */; };
 		4D5C7908288F868100FDC45B /* NameTranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C7907288F868100FDC45B /* NameTranslateViewController.swift */; };
 		4DA496DF2892251D00F6D7D4 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA496DE2892251D00F6D7D4 /* Translator.swift */; };
+		4DA496E228923EEF00F6D7D4 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA496E128923EEF00F6D7D4 /* Detector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4D5C7905288F867100FDC45B /* DetectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedViewController.swift; sourceTree = "<group>"; };
 		4D5C7907288F868100FDC45B /* NameTranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTranslateViewController.swift; sourceTree = "<group>"; };
 		4DA496DE2892251D00F6D7D4 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		4DA496E128923EEF00F6D7D4 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +134,8 @@
 		4D32ABE9288D23BE00880F60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DA496E02892373A00F6D7D4 /* Detector */,
 				4DA496DD2892250A00F6D7D4 /* Translator */,
-				4D32ABF4288D277D00880F60 /* DetectedModel.swift */,
 				4D32ABF6288D279000880F60 /* NameTranslateModel.swift */,
 			);
 			path = Models;
@@ -146,6 +148,15 @@
 				4DA496DE2892251D00F6D7D4 /* Translator.swift */,
 			);
 			path = Translator;
+			sourceTree = "<group>";
+		};
+		4DA496E02892373A00F6D7D4 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				4D32ABF4288D277D00880F60 /* DetectedModel.swift */,
+				4DA496E128923EEF00F6D7D4 /* Detector.swift */,
+			);
+			path = Detector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				4D32ABD6288D239000880F60 /* TranslateViewController.swift in Sources */,
 				4D32ABD2288D239000880F60 /* AppDelegate.swift in Sources */,
 				4D32ABED288D23FE00880F60 /* DetectorNetworkManager.swift in Sources */,
+				4DA496E228923EEF00F6D7D4 /* Detector.swift in Sources */,
 				4D32ABF5288D277D00880F60 /* DetectedModel.swift in Sources */,
 				4D32ABEF288D241F00880F60 /* NameTranslateNetworkManager.swift in Sources */,
 				4D32ABF3288D275200880F60 /* TranslateModel.swift in Sources */,

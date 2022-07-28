@@ -1,11 +1,12 @@
 import UIKit
 
+//MARK: - 에러
 enum TNetworkError: Error {
     case tNetworkError
     case tDataError
     case tParseError
 }
-
+//MARK: - 네트워크 fetch
 class TransLateNetworkManager {
     
     static let transShared = TransLateNetworkManager()
@@ -22,7 +23,7 @@ class TransLateNetworkManager {
         }
     }
     
-    
+//MARK: - 네트워크 POST
     private func postText(with paramData: Data, completion: @escaping transNetworkCompletion){
         
         guard let url = URL(string: TransAPI.transBasicURL) else {
@@ -70,6 +71,7 @@ class TransLateNetworkManager {
         
     }
     
+//MARK: - JSON Parse
     private func postParseJSON(_ paramData: Data) -> Message? {
         do {
             let transData = try JSONDecoder().decode(WelcomeTranslate.self, from: paramData)

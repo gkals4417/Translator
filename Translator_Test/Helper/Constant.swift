@@ -12,3 +12,10 @@ public struct TransAPI {
     static let clientID = "_RnmnlfxEnDvEEJy9lf2"
     static let clientSecret = "bGHVTHRMGd"
 }
+
+
+public struct DetectAPI {
+    static let detectBasicURL = "https://openapi.naver.com/v1/papago/detectLangs"
+    static let clientID = "_RnmnlfxEnDvEEJy9lf2"
+    static let clientSecret = "bGHVTHRMGd"
+}

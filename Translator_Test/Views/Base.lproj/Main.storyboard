@@ -13,7 +13,7 @@
         <!--NameTranslate-->
         <scene sceneID="Xsm-Ze-z4w">
             <objects>
-                <viewController id="Q3D-XG-Zga" customClass="DetectedViewController" customModule="Translator_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q3D-XG-Zga" customClass="NameTranslateViewController" customModule="Translator_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="omq-Lc-cWr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,14 +132,46 @@
         <!--Detect-->
         <scene sceneID="W3d-nR-NFM">
             <objects>
-                <viewController id="jBU-6s-t7a" customClass="NameTranslateViewController" customModule="Translator_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jBU-6s-t7a" customClass="DetectedViewController" customModule="Translator_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Myc-Cb-fVL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="글자를 입력하세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7py-ow-05H">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="06H-gI-fBj"/>
+                                    <constraint firstAttribute="width" constant="300" id="7FJ-Xy-aGa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감지중..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-b0-zAU">
+                                <rect key="frame" x="0.0" y="228" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZaO-d4-y4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kW6-5b-K4X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pIc-b0-zAU" firstAttribute="centerX" secondItem="Myc-Cb-fVL" secondAttribute="centerX" id="CDT-I4-2Of"/>
+                            <constraint firstItem="7py-ow-05H" firstAttribute="top" secondItem="pIc-b0-zAU" secondAttribute="bottom" constant="30" id="G5i-SZ-Gal"/>
+                            <constraint firstItem="kW6-5b-K4X" firstAttribute="trailing" secondItem="pIc-b0-zAU" secondAttribute="trailing" id="L5E-Dm-Rp5"/>
+                            <constraint firstItem="7py-ow-05H" firstAttribute="centerY" secondItem="Myc-Cb-fVL" secondAttribute="centerY" id="LHP-si-uC2"/>
+                            <constraint firstItem="7py-ow-05H" firstAttribute="centerX" secondItem="Myc-Cb-fVL" secondAttribute="centerX" id="Ofy-wK-VPX"/>
+                            <constraint firstItem="pIc-b0-zAU" firstAttribute="leading" secondItem="kW6-5b-K4X" secondAttribute="leading" id="WnG-DV-TJc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detect" image="app" catalog="system" selectedImage="app" id="0Dn-2b-uVJ"/>
+                    <connections>
+                        <outlet property="mainDetectLabel" destination="pIc-b0-zAU" id="6TM-U5-F83"/>
+                        <outlet property="mainTextField" destination="7py-ow-05H" id="IzR-ms-Wm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhU-nG-Th8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
