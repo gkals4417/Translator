@@ -17,10 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="omq-Lc-cWr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DfQ-t1-LgF">
+                                <rect key="frame" x="57" y="94" width="300" height="379"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한글이름을 영어이름으로 바꾸기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rk2-6d-aRW">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TrC-kU-tfO">
+                                        <rect key="frame" x="0.0" y="29" width="300" height="350"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한글 이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-0N-TVN">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="54L-HY-boE"/>
+                                                    <constraint firstAttribute="height" constant="300" id="DK3-LN-9DR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ook-vJ-ydk">
+                                                <rect key="frame" x="125" y="300" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="ceR-7z-cTS"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ipS-vB-5qX"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="">
+                                                    <imageReference key="image" image="arrow.down" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                                        <hierarchicalColors>
+                                                            <color white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </state>
+                                                <connections>
+                                                    <action selector="transButtonTapped:" destination="Q3D-XG-Zga" eventType="touchUpInside" id="O3f-cw-Vcp"/>
+                                                    <action selector="transButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9v-Wq-IPi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="red-O8-fHd">
+                                <rect key="frame" x="0.0" y="473" width="414" height="340"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jKA-Ey-2Eq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DfQ-t1-LgF" firstAttribute="centerX" secondItem="omq-Lc-cWr" secondAttribute="centerX" id="3JD-Ry-KvD"/>
+                            <constraint firstItem="red-O8-fHd" firstAttribute="top" secondItem="DfQ-t1-LgF" secondAttribute="bottom" id="MZ6-lq-Fct"/>
+                            <constraint firstItem="jKA-Ey-2Eq" firstAttribute="trailing" secondItem="red-O8-fHd" secondAttribute="trailing" id="PeJ-cR-8dr"/>
+                            <constraint firstItem="red-O8-fHd" firstAttribute="leading" secondItem="jKA-Ey-2Eq" secondAttribute="leading" id="Xqv-p2-xrg"/>
+                            <constraint firstItem="DfQ-t1-LgF" firstAttribute="top" secondItem="jKA-Ey-2Eq" secondAttribute="top" constant="50" id="l9P-NG-RbS"/>
+                            <constraint firstItem="jKA-Ey-2Eq" firstAttribute="bottom" secondItem="red-O8-fHd" secondAttribute="bottom" id="tOg-yd-oRS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="NameTranslate" image="person" catalog="system" selectedImage="person" id="eRh-sx-Nlt"/>
+                    <connections>
+                        <outlet property="korNameTextField" destination="mqe-0N-TVN" id="Yls-2x-Grf"/>
+                        <outlet property="mainTableView" destination="red-O8-fHd" id="fwV-Cr-NXA"/>
+                        <outlet property="translateButton" destination="Ook-vJ-ydk" id="jgQ-iS-KIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyv-MT-uwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,6 +265,7 @@
     </scenes>
     <resources>
         <image name="app" catalog="system" width="128" height="114"/>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
         <image name="person" catalog="system" width="128" height="117"/>

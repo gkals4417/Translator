@@ -19,3 +19,13 @@ public struct DetectAPI {
     static let clientID = "_RnmnlfxEnDvEEJy9lf2"
     static let clientSecret = "bGHVTHRMGd"
 }
+
+public struct NameTransAPI {
+    static let nameTransBasicURL = "https://openapi.naver.com/v1/krdict/romanization"
+    static let clientID = "_RnmnlfxEnDvEEJy9lf2"
+    static let clientSecret = "bGHVTHRMGd"
+}
+
+public struct NameTransCell {
+    static let cellIdentifier = "NameCell"
+}

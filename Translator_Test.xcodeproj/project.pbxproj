@@ -16,7 +16,6 @@
 		4D32ABEB288D23E100880F60 /* TranslateNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABEA288D23E100880F60 /* TranslateNetworkManager.swift */; };
 		4D32ABED288D23FE00880F60 /* DetectorNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABEC288D23FE00880F60 /* DetectorNetworkManager.swift */; };
 		4D32ABEF288D241F00880F60 /* NameTranslateNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABEE288D241F00880F60 /* NameTranslateNetworkManager.swift */; };
-		4D32ABF1288D266D00880F60 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABF0288D266D00880F60 /* NetworkError.swift */; };
 		4D32ABF3288D275200880F60 /* TranslateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABF2288D275200880F60 /* TranslateModel.swift */; };
 		4D32ABF5288D277D00880F60 /* DetectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABF4288D277D00880F60 /* DetectedModel.swift */; };
 		4D32ABF7288D279000880F60 /* NameTranslateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32ABF6288D279000880F60 /* NameTranslateModel.swift */; };
@@ -25,6 +24,8 @@
 		4D5C7908288F868100FDC45B /* NameTranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C7907288F868100FDC45B /* NameTranslateViewController.swift */; };
 		4DA496DF2892251D00F6D7D4 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA496DE2892251D00F6D7D4 /* Translator.swift */; };
 		4DA496E228923EEF00F6D7D4 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA496E128923EEF00F6D7D4 /* Detector.swift */; };
+		4DA496E62893908300F6D7D4 /* NameTransTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA496E42893908300F6D7D4 /* NameTransTableViewCell.swift */; };
+		4DA496E72893908300F6D7D4 /* NameTransTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA496E52893908300F6D7D4 /* NameTransTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,6 @@
 		4D32ABEA288D23E100880F60 /* TranslateNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateNetworkManager.swift; sourceTree = "<group>"; };
 		4D32ABEC288D23FE00880F60 /* DetectorNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectorNetworkManager.swift; sourceTree = "<group>"; };
 		4D32ABEE288D241F00880F60 /* NameTranslateNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTranslateNetworkManager.swift; sourceTree = "<group>"; };
-		4D32ABF0288D266D00880F60 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		4D32ABF2288D275200880F60 /* TranslateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateModel.swift; sourceTree = "<group>"; };
 		4D32ABF4288D277D00880F60 /* DetectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedModel.swift; sourceTree = "<group>"; };
 		4D32ABF6288D279000880F60 /* NameTranslateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTranslateModel.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		4D5C7907288F868100FDC45B /* NameTranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTranslateViewController.swift; sourceTree = "<group>"; };
 		4DA496DE2892251D00F6D7D4 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		4DA496E128923EEF00F6D7D4 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		4DA496E42893908300F6D7D4 /* NameTransTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTransTableViewCell.swift; sourceTree = "<group>"; };
+		4DA496E52893908300F6D7D4 /* NameTransTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTransTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,6 @@
 				4D32ABEA288D23E100880F60 /* TranslateNetworkManager.swift */,
 				4D32ABEC288D23FE00880F60 /* DetectorNetworkManager.swift */,
 				4D32ABEE288D241F00880F60 /* NameTranslateNetworkManager.swift */,
-				4D32ABF0288D266D00880F60 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -127,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				4D32ABD7288D239000880F60 /* Main.storyboard */,
+				4DA496E42893908300F6D7D4 /* NameTransTableViewCell.swift */,
+				4DA496E52893908300F6D7D4 /* NameTransTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,9 +137,9 @@
 		4D32ABE9288D23BE00880F60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DA496E02892373A00F6D7D4 /* Detector */,
+				4DA496E3289363BB00F6D7D4 /* NameTranslator */,
 				4DA496DD2892250A00F6D7D4 /* Translator */,
-				4D32ABF6288D279000880F60 /* NameTranslateModel.swift */,
+				4DA496E02892373A00F6D7D4 /* Detector */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +160,14 @@
 				4DA496E128923EEF00F6D7D4 /* Detector.swift */,
 			);
 			path = Detector;
+			sourceTree = "<group>";
+		};
+		4DA496E3289363BB00F6D7D4 /* NameTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				4D32ABF6288D279000880F60 /* NameTranslateModel.swift */,
+			);
+			path = NameTranslator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				4D32ABDE288D239100880F60 /* LaunchScreen.storyboard in Resources */,
 				4D32ABDB288D239100880F60 /* Assets.xcassets in Resources */,
 				4D32ABD9288D239000880F60 /* Main.storyboard in Resources */,
+				4DA496E72893908300F6D7D4 /* NameTransTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,13 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D32ABEB288D23E100880F60 /* TranslateNetworkManager.swift in Sources */,
-				4D32ABF1288D266D00880F60 /* NetworkError.swift in Sources */,
 				4D32ABD6288D239000880F60 /* TranslateViewController.swift in Sources */,
 				4D32ABD2288D239000880F60 /* AppDelegate.swift in Sources */,
 				4D32ABED288D23FE00880F60 /* DetectorNetworkManager.swift in Sources */,
 				4DA496E228923EEF00F6D7D4 /* Detector.swift in Sources */,
 				4D32ABF5288D277D00880F60 /* DetectedModel.swift in Sources */,
 				4D32ABEF288D241F00880F60 /* NameTranslateNetworkManager.swift in Sources */,
+				4DA496E62893908300F6D7D4 /* NameTransTableViewCell.swift in Sources */,
 				4D32ABF3288D275200880F60 /* TranslateModel.swift in Sources */,
 				4D5C7906288F867100FDC45B /* DetectedViewController.swift in Sources */,
 				4D32ABF9288F7AD200880F60 /* Constant.swift in Sources */,
@@ -397,6 +409,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -426,6 +439,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

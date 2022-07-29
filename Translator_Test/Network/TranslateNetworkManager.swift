@@ -27,7 +27,7 @@ class TransLateNetworkManager {
     private func postText(with paramData: Data, completion: @escaping transNetworkCompletion){
         
         guard let url = URL(string: TransAPI.transBasicURL) else {
-            print("ERROR: Cannot create URL")
+            print("ERROR: Cannot Create URL")
             return
         }
         
@@ -59,11 +59,11 @@ class TransLateNetworkManager {
             }
             
             if let trans = self.postParseJSON(safeData){
-                print("Success parse")
+                print("Success Parse")
                 completion(.success(trans.result))
                 
             } else {
-                print("Faild parse")
+                print("Failed Parse")
                 completion(.failure(.tParseError))
             }
         }
