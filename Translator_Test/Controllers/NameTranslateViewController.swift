@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//MARK: - 한글이름 로마자 번역기 뷰컨트롤러
 
 class NameTranslateViewController: UIViewController {
 
@@ -33,10 +34,11 @@ class NameTranslateViewController: UIViewController {
         korNameTextField.delegate = self
         
         korNameTextField.keyboardType = .default
-        korNameTextField.returnKeyType = .continue
+        korNameTextField.returnKeyType = .default
         
         mainTableView.register(UINib(nibName: "NameTransTableViewCell", bundle: nil), forCellReuseIdentifier: NameTransCell.cellIdentifier)
         mainTableView.dataSource = self
+        
     }
     
     func getDatas(korName: String){
@@ -66,6 +68,7 @@ class NameTranslateViewController: UIViewController {
 }
 
 
+//MARK: - 텍스트필드 델리게이트
 extension NameTranslateViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         mainTableView.reloadData()
@@ -80,6 +83,7 @@ extension NameTranslateViewController: UITextFieldDelegate {
 }
 
 
+//MARK: - 테이블뷰 데이타소스
 extension NameTranslateViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if totalResultArray.isEmpty {

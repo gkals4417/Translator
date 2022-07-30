@@ -6,6 +6,7 @@ enum NNetworkError: Error {
     case nParseError
 }
 
+//MARK: - 네트워크 fetch
 class NameTranslateNetworkManager {
     
     static let nameShared = NameTranslateNetworkManager()
@@ -21,7 +22,8 @@ class NameTranslateNetworkManager {
             completion(result)
         }
     }
-    
+
+//MARK: - 네트워크 GET
     private func getNameTransMethod(with urlString: String, completion: @escaping nameNetworkCompletion){
         guard let url = URL(string: urlString) else {
             print("ERROR: Cannot Create URL")
@@ -64,7 +66,8 @@ class NameTranslateNetworkManager {
         }
         task.resume()
     }
-    
+  
+//MARK: - JSON Parse
     private func getParseJSON(_ data: Data) -> [AResult]? {
         do {
             let transNameData = try JSONDecoder().decode(WelcomeNameTranslate.self, from: data)
