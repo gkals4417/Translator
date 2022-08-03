@@ -13,6 +13,7 @@ class NameTranslateViewController: UIViewController {
     @IBOutlet weak var korNameTextField: UITextField!
     @IBOutlet weak var translateButton: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var mainLabel: UILabel!
     
     
     let nameTranslateNetworkManager = NameTranslateNetworkManager.nameShared
@@ -26,6 +27,7 @@ class NameTranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationUI()
+        colorConfiguration()
         // Do any additional setup after loading the view.
     }
     
@@ -39,6 +41,17 @@ class NameTranslateViewController: UIViewController {
         mainTableView.register(UINib(nibName: "NameTransTableViewCell", bundle: nil), forCellReuseIdentifier: NameTransCell.cellIdentifier)
         mainTableView.dataSource = self
         
+        korNameTextField.clipsToBounds = true
+        korNameTextField.layer.cornerRadius = 10
+    }
+    
+    private func colorConfiguration(){
+        view.backgroundColor = ColorConstant.backgroundColor
+        mainLabel.textColor = .darkGray
+        korNameTextField.backgroundColor = ColorConstant.textFieldBackGroundColor
+        korNameTextField.textColor = .darkGray
+        translateButton.tintColor = .darkGray
+        mainTableView.backgroundColor = ColorConstant.textFieldBackGroundColor
     }
     
     func getDatas(korName: String){
@@ -48,7 +61,7 @@ class NameTranslateViewController: UIViewController {
                 print(array)
                 self.totalResultArray = array
                 DispatchQueue.main.async {
-                    self.totalResultArray.map { result in
+                    _ = self.totalResultArray.map { result in
                         self.aItemArray = result.aItems
                     }
                     self.mainTableView.reloadData()

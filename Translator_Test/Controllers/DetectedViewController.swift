@@ -20,6 +20,7 @@ class DetectedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationUI()
+        colorConfiguration()
         // Do any additional setup after loading the view.
     }
     
@@ -27,8 +28,17 @@ class DetectedViewController: UIViewController {
         mainTextField.delegate = self
         mainTextField.returnKeyType = .default
         mainTextField.keyboardType = .default
+        
+        mainTextField.clipsToBounds = true
+        mainTextField.layer.cornerRadius = 10
     }
     
+    private func colorConfiguration(){
+        view.backgroundColor = ColorConstant.backgroundColor
+        mainTextField.backgroundColor = ColorConstant.textFieldBackGroundColor
+        mainTextField.textColor = .darkGray
+        mainDetectLabel.textColor = .darkGray
+    }
     
     func detectText(){
         detectNetworkManager.fetchText(detectTerm: mainTextField.text ?? "") { result in

@@ -33,7 +33,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한글 이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-0N-TVN">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="54L-HY-boE"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="54L-HY-boE"/>
                                                     <constraint firstAttribute="height" constant="300" id="DK3-LN-9DR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -83,6 +83,7 @@
                     <tabBarItem key="tabBarItem" title="NameTranslate" image="person" catalog="system" selectedImage="person" id="eRh-sx-Nlt"/>
                     <connections>
                         <outlet property="korNameTextField" destination="mqe-0N-TVN" id="Yls-2x-Grf"/>
+                        <outlet property="mainLabel" destination="Rk2-6d-aRW" id="Hft-Nu-JxO"/>
                         <outlet property="mainTableView" destination="red-O8-fHd" id="fwV-Cr-NXA"/>
                         <outlet property="translateButton" destination="Ook-vJ-ydk" id="jgQ-iS-KIp"/>
                     </connections>
@@ -105,7 +106,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="텍스트를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-Rr-nEl">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="3td-qb-crx"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3td-qb-crx"/>
                                             <constraint firstAttribute="height" constant="300" id="faD-N5-jKl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -135,7 +136,7 @@
                                         <rect key="frame" x="0.0" y="350" width="300" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="1Ky-pZ-csd"/>
-                                            <constraint firstAttribute="width" constant="300" id="ptc-Jc-0BA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ptc-Jc-0BA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -183,6 +184,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Translate" image="text.bubble" catalog="system" selectedImage="text.bubble" id="U9u-pB-Vm9"/>
                     <connections>
+                        <outlet property="rightArrow" destination="GSA-fU-xtc" id="aOw-IW-Kkd"/>
                         <outlet property="srcPickerView" destination="wLf-iw-sNa" id="Man-bA-LOB"/>
                         <outlet property="srcTextField" destination="m2x-Rr-nEl" id="gtV-ft-3wC"/>
                         <outlet property="targetPickerView" destination="1Oa-Hh-97v" id="QbS-5v-rbB"/>
@@ -205,8 +207,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="글자를 입력하세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7py-ow-05H">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="06H-gI-fBj"/>
-                                    <constraint firstAttribute="width" constant="300" id="7FJ-Xy-aGa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="06H-gI-fBj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="7FJ-Xy-aGa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -229,7 +231,7 @@
                             <constraint firstItem="kW6-5b-K4X" firstAttribute="trailing" secondItem="pIc-b0-zAU" secondAttribute="trailing" id="L5E-Dm-Rp5"/>
                             <constraint firstItem="7py-ow-05H" firstAttribute="centerY" secondItem="Myc-Cb-fVL" secondAttribute="centerY" id="LHP-si-uC2"/>
                             <constraint firstItem="7py-ow-05H" firstAttribute="centerX" secondItem="Myc-Cb-fVL" secondAttribute="centerX" id="Ofy-wK-VPX"/>
-                            <constraint firstItem="pIc-b0-zAU" firstAttribute="leading" secondItem="kW6-5b-K4X" secondAttribute="leading" id="WnG-DV-TJc"/>
+                            <constraint firstItem="pIc-b0-zAU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kW6-5b-K4X" secondAttribute="leading" id="WnG-DV-TJc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detect" image="app" catalog="system" selectedImage="app" id="0Dn-2b-uVJ"/>
@@ -251,6 +253,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qo6-LC-1iv"/>

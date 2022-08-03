@@ -15,6 +15,7 @@ class TranslateViewController: UIViewController {
     @IBOutlet weak var srcTextField: UITextField!
     @IBOutlet weak var translatedTextField: UITextField!
     @IBOutlet weak var translateButton: UIButton!
+    @IBOutlet weak var rightArrow: UIButton!
     
     let transNetworkManager = TransLateNetworkManager.transShared
     let translator = Translator()
@@ -26,8 +27,8 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        colorConfiguration()
         configurationUI()
-        
     }
     
     func configurationUI(){
@@ -38,11 +39,24 @@ class TranslateViewController: UIViewController {
         srcTextField.delegate = self
         translatedTextField.delegate = self
         
+        srcTextField.clipsToBounds = true
+        srcTextField.layer.cornerRadius = 10
+        translatedTextField.clipsToBounds = true
+        translatedTextField.layer.cornerRadius = 10
+        
         srcTextField.keyboardType = .default
         srcTextField.returnKeyType = .default
     }
     
-    
+    private func colorConfiguration(){
+        view.backgroundColor = ColorConstant.backgroundColor
+        srcTextField.backgroundColor = ColorConstant.textFieldBackGroundColor
+        srcTextField.textColor = .darkGray
+        translatedTextField.backgroundColor = ColorConstant.textFieldBackGroundColor
+        translatedTextField.textColor = .darkGray
+        rightArrow.tintColor = .darkGray
+        translateButton.tintColor = .darkGray
+    }
     func getTransText(){
         transNetworkManager.fetchTrans(srcString: tempSrcLanguageValues, targetString: tempTargetLanguageValues, text: srcTextField.text ?? "") { result in
             switch result {
@@ -97,6 +111,8 @@ extension TranslateViewController: UIPickerViewDelegate {
         var label = UILabel()
         if let v = view as? UILabel {label = v}
         label.font = UIFont(name: "Helvetica Neue", size: 20)
+        label.textColor = .darkGray
+        label.backgroundColor = ColorConstant.selectBackGroundColor
         label.text = translator.languageKeys[row]
         label.textAlignment = .center
         return label

@@ -15,6 +15,9 @@ class NameTransTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
+        backgroundColor = ColorConstant.textFieldBackGroundColor
+        firstNameLabel.textColor = .darkGray
+        secondNameLabel.textColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
